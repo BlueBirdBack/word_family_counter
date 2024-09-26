@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "word_family_counter"
-version = "0.1.0"
+version = "0.1.1"
 description = "A script for counting word families in a text file."
 authors = [{ name = "BlueBirdBack", email = "avery@bluebirdback.com" }]
 license = { text = "MIT License" }

@@ -36,10 +36,10 @@ A Python script for counting word families in a text file using advanced morphol
 
 ## Usage
 
-Run the script with a text file as an argument:
+Run the command with a text file as an argument:
 
 ```
-python src/word_family_counter/main.py path/to/your/text_file.txt
+word_family_counter path/to/your/text_file.txt
 ```
 
 Optional arguments:
@@ -48,8 +48,10 @@ Optional arguments:
 
 Example:
 ```
-python src/word_family_counter/main.py sample.txt --verbose --language en_core_web_md
+word_family_counter sample.txt --verbose --language en_core_web_md
 ```
+
+Note: Ensure that you have installed the required spaCy model before running the command. If you encounter an error about missing models, run the installation command in step 4 again.
 
 ## Output
 
