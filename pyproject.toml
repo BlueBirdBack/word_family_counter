@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "word_family_counter"
-version = "0.1.1"
+version = "0.1.2"
 description = "A script for counting word families in a text file."
 authors = [{ name = "BlueBirdBack", email = "avery@bluebirdback.com" }]
 license = { text = "MIT License" }
@@ -26,7 +26,7 @@ keywords = ["nlp", "word families", "text analysis", "linguistics"]
 dependencies = [
     "spacy>=3.0.0,<4.0.0",
     "contractions>=0.1.0,<1.0.0",
-    "psutil>=5.8.0,<6.0.0",
+    "psutil>=5.8.0",
 ]
 
 [project.urls]
@@ -62,3 +62,7 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
+
+[tool.hatch.build.hooks.custom]
+dependencies = ["spacy"]
+script = "import spacy; spacy.cli.download('en_core_web_sm')"

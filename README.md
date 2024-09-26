@@ -13,26 +13,26 @@ A Python script for counting word families in a text file using advanced morphol
 ## Installation
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/BlueBirdBack/word_family_counter.git
    cd word_family_counter
    ```
 
 2. Create a virtual environment (optional but recommended):
+
    ```
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
    ```
 
 3. Install the required dependencies:
+
    ```
    pip install -r requirements.txt
    ```
 
-4. Download the spaCy language model:
-   ```
-   python -m spacy download en_core_web_sm
-   ```
+4. The required spaCy model will be automatically downloaded during installation.
 
 ## Usage
 
@@ -43,10 +43,12 @@ word_family_counter path/to/your/text_file.txt
 ```
 
 Optional arguments:
+
 - `--verbose`: Increase output verbosity for debugging purposes
 - `--language`: Specify the spaCy model to use (default: en_core_web_sm)
 
 Example:
+
 ```
 word_family_counter sample.txt --verbose --language en_core_web_md
 ```
@@ -56,6 +58,7 @@ Note: Ensure that you have installed the required spaCy model before running the
 ## Output
 
 The script will display:
+
 1. Total number of words in the text
 2. Total number of unique word families
 3. A list of word families sorted by frequency (descending) and then alphabetically
